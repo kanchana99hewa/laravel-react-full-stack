@@ -7,7 +7,7 @@ export default function DefaultLayout() {
   const {user, token, setUser, setToken, notification} = useStateContext();
 
   if (!token) {
-    return <Navigate to="/login"/>
+    /*return <Navigate to="/login"/> */
   }
 
   const onLogout = ev => {
@@ -20,12 +20,7 @@ export default function DefaultLayout() {
       })
   }
 
-  useEffect(() => {
-    axiosClient.get('/user')
-      .then(({data}) => {
-         setUser(data)
-      })
-  }, [])
+
 
   return (
     <div id="defaultLayout">
