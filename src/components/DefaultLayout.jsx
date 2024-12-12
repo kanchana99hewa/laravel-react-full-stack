@@ -7,7 +7,7 @@ export default function DefaultLayout() {
   const {user, token, setUser, setToken, notification} = useStateContext();
 
   if (!token) {
-    /*return <Navigate to="/login"/> */
+   return <Navigate to="/login"/> 
   }
 
   const onLogout = ev => {
